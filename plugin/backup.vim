@@ -21,7 +21,7 @@ def SetupBackupDir():
 	(dir_part, foobar, file_part) = \
 		os.path.realpath(vim.current.buffer.name).rpartition('/')
 
-	backup_dir = os.path.join(os.environ['HOME'],'.vim_plugins','vim_backup',
+	backup_dir = os.path.join(os.environ['HOME'],'.vim','backup',
 		hashlib.md5(dir_part).hexdigest())
 
 	if os.path.exists(backup_dir):
